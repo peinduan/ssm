@@ -11,6 +11,7 @@
         #div1 {
             width: 100%;
             height: 150px;
+            box-sizing: border-box;
         }
 
         input[type=button] {
@@ -45,6 +46,7 @@
             float: left;
             font-size: 25px;
             font-family: 楷体;
+
             border: 0;
             background-color: #dddddd;
             border-radius: 5px;
@@ -60,71 +62,197 @@
 
         }
 
+        p {
+            margin: 0;
+            padding: 0;
+        }
+
+        #clock {
+            font-family: 'Share Tech Mono', monospace;
+            color: #ffffff;
+            text-align: center;
+            position: absolute;
+            left: 15%;
+            top: 15%;
+            -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            color: #daf6ff;
+            text-shadow: 0 0 20px #0aafe6, 0 0 20px rgba(10, 175, 230, 0);
+        }
+
+        #clock .time {
+            letter-spacing: 0.05em;
+            font-size: 80px;
+            padding: 5px 0;
+        }
+
+        #clock .date {
+            letter-spacing: 0.1em;
+            font-size: 24px;
+        }
+
+        #clock .text {
+            letter-spacing: 0.1em;
+            font-size: 25px;
+            padding: 20px 0 0;
+
+        }
+
 
     </style>
 </head>
 <body>
-<div id="div1"></div>
+<div id="div1">
+    <div id="clock">
+        <p class="date">{{ date }}</p>
+        <p class="time">{{ time }}</p>
+        <p class="text">DarryRing</p>
+    </div>
+
+</div>
 <div id="div3">
     <form method="get" action="https://www.baidu.com/s">
-    <input type="text" id="div4" autofocus="autofocus" name="wd"></form>
+        <input type="text" id="div4" autofocus="autofocus" name="wd"></form>
 </div>
 
 <div id="div6">
     <div class="div2">
-        <a href="https://v.qq.com/"><input type="button" value="腾讯视频"></a>
+        <a href="https://v.qq.com/"><input type="button" value="腾讯视频" onmouseover="this.style.backgroundColor='#daf6ff'"
+                                           onMouseOut="this.style.backgroundColor=''"></a>
     </div>
     <div class="div2">
-        <a href="http://www.iqiyi.com/"><input type="button" value="爱奇艺"></a>
+        <a href="http://www.iqiyi.com/"><input type="button" value="爱奇艺"
+                                               onmouseover="this.style.backgroundColor='#daf6ff'"
+                                               onMouseOut="this.style.backgroundColor=''"></a>
     </div>
     <div class="div2">
-        <a href="https://www.youku.com/"><input type="button" value="优酷"></a>
+        <a href="https://www.youku.com/"><input type="button" value="优酷"
+                                                onmouseover="this.style.backgroundColor='#daf6ff'"
+                                                onMouseOut="this.style.backgroundColor=''"></a>
     </div>
     <div class="div2">
-        <a href="https://www.bilibili.com/"><input type="button" value="B站"></a>
+        <a href="https://www.bilibili.com/"><input type="button" value="B站"
+                                                   onmouseover="this.style.backgroundColor='#daf6ff'"
+                                                   onMouseOut="this.style.backgroundColor=''"></a>
     </div>
     <div class="div2">
-        <a href="https://www.douyu.com/"><input type="button" value="斗鱼"></a>
+        <a href="https://www.douyu.com/"><input type="button" value="斗鱼"
+                                                onmouseover="this.style.backgroundColor='#daf6ff'"
+                                                onMouseOut="this.style.backgroundColor=''"></a>
     </div>
     <div class="div2">
-        <a href="http://www.qiqipu.com/"><input type="button" value="七七铺"></a>
+        <a href="http://www.qiqipu.com/"><input type="button" value="七七铺"
+                                                onmouseover="this.style.backgroundColor='#daf6ff'"
+                                                onMouseOut="this.style.backgroundColor=''"></a>
     </div>
     <div class="div2">
-        <a href="https://i.mi.com/"><input type="button" value="小米云"></a>
+        <a href="https://i.mi.com/"><input type="button" value="小米云" onmouseover="this.style.backgroundColor='#daf6ff'"
+                                           onMouseOut="this.style.backgroundColor=''"></a>
     </div>
     <div class="div2">
-        <a href="https://www.weiyun.com/"><input type="button" value="腾讯云"></a>
+        <a href="https://www.weiyun.com/"><input type="button" value="腾讯云"
+                                                 onmouseover="this.style.backgroundColor='#daf6ff'"
+                                                 onMouseOut="this.style.backgroundColor=''"></a>
     </div>
     <div class="div2">
-        <a href="https://pan.baidu.com/"><input type="button" value="百度云"></a>
+        <a href="https://pan.baidu.com/"><input type="button" value="百度云"
+                                                onmouseover="this.style.backgroundColor='#daf6ff'"
+                                                onMouseOut="this.style.backgroundColor=''"></a>
     </div>
     <div class="div2">
-        <a href="https://tieba.baidu.com/"><input type="button" value="贴吧"></a>
+        <a href="https://tieba.baidu.com/"><input type="button" value="贴吧"
+                                                  onmouseover="this.style.backgroundColor='#daf6ff'"
+                                                  onMouseOut="this.style.backgroundColor=''"></a>
     </div>
     <div class="div2">
-        <a href="https://mail.qq.com/"><input type="button" value="QQ邮箱"></a>
+        <a href="https://mail.qq.com/"><input type="button" value="QQ邮箱"
+                                              onmouseover="this.style.backgroundColor='#daf6ff'"
+                                              onMouseOut="this.style.backgroundColor=''"></a>
     </div>
     <div class="div2">
-        <a href="https://www.mi.com/"><input type="button" value="小米商城"></a>
+        <a href="https://www.mi.com/"><input type="button" value="小米商城"
+                                             onmouseover="this.style.backgroundColor='#daf6ff'"
+                                             onMouseOut="this.style.backgroundColor=''"></a>
     </div>
     <div class="div2">
-        <a href="https://www.mi.com/"><input type="button" value="小米商城"></a>
+        <a href="http://zhongzishenqi.com/"><input type="button" value="种子神器"
+                                                   onmouseover="this.style.backgroundColor='#daf6ff'"
+                                                   onMouseOut="this.style.backgroundColor=''"></a>
     </div>
     <div class="div2">
-        <a href="https://www.mi.com/"><input type="button" value="小米商城"></a>
+        <a href="https://www.yiclear.com/"><input type="button" value="广告净化"
+                                                  onmouseover="this.style.backgroundColor='#daf6ff'"
+                                                  onMouseOut="this.style.backgroundColor=''"></a>
     </div>
     <div class="div2">
-        <a href="https://www.mi.com/"><input type="button" value="小米商城"></a>
+        <a href="https://weidown.com/"><input type="button" value="微当下载"
+                                              onmouseover="this.style.backgroundColor='#daf6ff'"
+                                              onMouseOut="this.style.backgroundColor=''"></a>
     </div>
     <div class="div2">
-        <a href="https://www.mi.com/"><input type="button" value="小米商城"></a>
+        <a href="https://www.52pojie.cn/"><input type="button" value="吾爱破解"
+                                                 onmouseover="this.style.backgroundColor='#daf6ff'"
+                                                 onMouseOut="this.style.backgroundColor=''"></a>
     </div>
     <div class="div2">
-        <a href="https://www.mi.com/"><input type="button" value="小米商城"></a>
+        <a href="https://fanyi.baidu.com/"><input type="button" value="百度翻译"
+                                                  onmouseover="this.style.backgroundColor='#daf6ff'"
+                                                  onMouseOut="this.style.backgroundColor=''"></a>
     </div>
     <div class="div2">
-        <a href="https://www.mi.com/"><input type="button" value="小米商城"></a>
+        <a href="http://ntlias-stu.boxuegu.com/#/login"><input type="button" value="传智播客"
+                                                               onmouseover="this.style.backgroundColor='#daf6ff'"
+                                                               onMouseOut="this.style.backgroundColor=''"></a>
+    </div>
+    <div class="div2">
+        <a href="https://www.csdn.net/"><input type="button" value="CSDN"
+                                               onmouseover="this.style.backgroundColor='#daf6ff'"
+                                               onMouseOut="this.style.backgroundColor=''"></a>
+    </div>
+    <div class="div2">
+        <a href="http://www.w3school.com.cn/"><input type="button" value="W3school"
+                                                     onmouseover="this.style.backgroundColor='#daf6ff'"
+                                                     onMouseOut="this.style.backgroundColor=''"></a>
     </div>
 </div>
+
+
+<script type="text/javascript" src="vue.min.js"></script>
+<script>
+    var clock = new Vue({
+        el: '#clock',
+        data: {
+            time: '',
+            date: ''
+        }
+    });
+
+    var week = ['星期天', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
+    var timerID = setInterval(updateTime, 1000);
+    updateTime();
+
+    function updateTime() {
+        var cd = new Date();
+        clock.time = zeroPadding(cd.getHours(), 2) + ':' + zeroPadding(cd.getMinutes(), 2) + ':' + zeroPadding(cd.getSeconds(), 2);
+        clock.date = zeroPadding(cd.getFullYear(), 4) + '-' + zeroPadding(cd.getMonth() + 1, 2) + '-' + zeroPadding(cd.getDate(), 2) + ' ' + week[cd.getDay()];
+    }
+
+    function zeroPadding(num, digit) {
+        var zero = '';
+        for (var i = 0; i < digit; i++) {
+            zero += '0';
+        }
+        return (zero + num).slice(-digit);
+    }
+
+
+    var divs = document.getElementsByClassName("div2");
+    for (var i = 0; i < divs.length; i++) {
+
+    }
+
+
+</script>
+
 </body>
 </html>
