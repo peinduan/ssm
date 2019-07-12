@@ -26,4 +26,13 @@ public class ProductController {
         modelAndView.setViewName("product-list1");
         return modelAndView;
     }
+
+
+    @RequestMapping("/add")
+    public String add(Product product){
+        ps.add(product);
+
+        return "forward:findAll";
+    }
+
 }

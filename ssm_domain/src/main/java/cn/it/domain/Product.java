@@ -1,6 +1,7 @@
 package cn.it.domain;
 
 import java.io.Serializable;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Product implements Serializable {
@@ -16,21 +17,6 @@ public class Product implements Serializable {
     private Integer productStatus; // 状态 0 关闭 1 开启
     private String productStatusStr;
 
-    @Override
-    public String toString() {
-        return "Product{" +
-                "id='" + id + '\'' +
-                ", productNum='" + productNum + '\'' +
-                ", productName='" + productName + '\'' +
-                ", cityName='" + cityName + '\'' +
-                ", departureTime=" + departureTime +
-                ", departureTimeStr='" + departureTimeStr + '\'' +
-                ", productPrice=" + productPrice +
-                ", productDesc='" + productDesc + '\'' +
-                ", productStatus=" + productStatus +
-                ", productStatusStr='" + productStatusStr + '\'' +
-                '}';
-    }
 
     public String getId() {
         return id;
@@ -73,6 +59,10 @@ public class Product implements Serializable {
     }
 
     public String getDepartureTimeStr() {
+        if (departureTime!=null){
+            SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+            departureTimeStr = sdf.format(departureTime);
+        }
         return departureTimeStr;
     }
 
@@ -105,6 +95,12 @@ public class Product implements Serializable {
     }
 
     public String getProductStatusStr() {
+        if (productStatus==0){
+            productStatusStr="关闭";
+        }
+        if (productStatus==1){
+            productStatusStr="开启";
+        }
         return productStatusStr;
     }
 

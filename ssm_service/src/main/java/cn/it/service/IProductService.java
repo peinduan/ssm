@@ -11,4 +11,6 @@ public interface IProductService {
 
 
     List<Product> findAll();
+
+    void add(Product product);
 }
