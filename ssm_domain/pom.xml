@@ -11,5 +11,13 @@
 
     <artifactId>ssm_domain</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>cn.it</groupId>
+            <artifactId>ssm_utils</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
 
 </project>

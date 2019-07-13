@@ -8,8 +8,8 @@ import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-@Repository
-public interface ProductDao {
+
+public interface IProductDao {
 
     @Select("select * from product")
     List<Product> finAll();
@@ -17,4 +17,8 @@ public interface ProductDao {
     @Insert("insert into product(id,productNum,productName,cityName,departureTime,productPrice,productDesc,productStatus)\n" +
             "values(#{id},#{productNum},#{productName},#{cityName},#{departureTime},#{productPrice},#{productDesc},#{productStatus})")
     void add(Product product);
+
+
+    @Select("select * from product where id=#{id}")
+    Product findById(String id);
 }

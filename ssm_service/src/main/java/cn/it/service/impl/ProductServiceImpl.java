@@ -1,6 +1,6 @@
 package cn.it.service.impl;
 
-import cn.it.dao.ProductDao;
+import cn.it.dao.IProductDao;
 import cn.it.domain.Product;
 import cn.it.service.IProductService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,15 +12,15 @@ import java.util.List;
 public class ProductServiceImpl implements IProductService {
 
     @Autowired
-    private ProductDao productDao;
+    private IProductDao IProductDao;
 
     @Override
     public List<Product> findAll() {
-        return productDao.finAll();
+        return IProductDao.finAll();
     }
 
     @Override
     public void add(Product product) {
-        productDao.add(product);
+        IProductDao.add(product);
     }
 }

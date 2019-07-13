@@ -33,19 +33,19 @@
                 <ul class="treeview-menu">
 
                     <li><a
-                            href="${pageContext.request.contextPath}/user/findAll.do"> <i
+                            href="${pageContext.request.contextPath}/user/findAll"> <i
                             class="fa fa-circle-o"></i> 用户管理
                     </a></li>
                     <li><a
-                            href="${pageContext.request.contextPath}/role/findAll.do"> <i
+                            href="${pageContext.request.contextPath}/role/findAll"> <i
                             class="fa fa-circle-o"></i> 角色管理
                     </a></li>
                     <li><a
-                            href="${pageContext.request.contextPath}/permission/findAll.do">
+                            href="${pageContext.request.contextPath}/permission/findAll">
                         <i class="fa fa-circle-o"></i> 资源管理
                     </a></li>
                     <li><a
-                            href="${pageContext.request.contextPath}/sysLog/findAll.do"> <i
+                            href="${pageContext.request.contextPath}/sysLog/findAll"> <i
                             class="fa fa-circle-o"></i> 访问日志
                     </a></li>
                 </ul>
@@ -58,11 +58,11 @@
                 <ul class="treeview-menu">
 
                     <li><a
-                            href="${pageContext.request.contextPath}/product/findAll.do">
+                            href="${pageContext.request.contextPath}/product/findAll">
                         <i class="fa fa-circle-o"></i> 产品管理
                     </a></li>
                     <li><a
-                            href="${pageContext.request.contextPath}/orders/findAll.do?page=1&size=4"> <i
+                            href="${pageContext.request.contextPath}/orders/findAll?page=1&size=4"> <i
                             class="fa fa-circle-o"></i> 订单管理
                     </a></li>
 

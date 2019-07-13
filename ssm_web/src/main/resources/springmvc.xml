@@ -24,7 +24,12 @@
     </bean>
 
     <!--静态资源-->
-    <mvc:default-servlet-handler/>
+    <!--<mvc:default-servlet-handler/>-->
+    <mvc:resources location="/css/" mapping="/css/**" />
+    <mvc:resources location="/img/" mapping="/img/**" />
+    <mvc:resources location="/js/" mapping="/js/**" />
+    <mvc:resources location="/plugins/" mapping="/plugins/**" />
+
 
     <!--
         支持AOP的注解支持，AOP底层使用代理技术
