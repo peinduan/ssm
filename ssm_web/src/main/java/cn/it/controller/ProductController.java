@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.List;
+import java.util.UUID;
 
 @Controller
 @RequestMapping("/product")
@@ -30,8 +31,8 @@ public class ProductController {
 
     @RequestMapping("/add")
     public String add(Product product){
+        product.setId(UUID.randomUUID().toString().replace("-",""));
         ps.add(product);
-
         return "forward:findAll";
     }
 

@@ -14,7 +14,7 @@ public interface ProductDao {
     @Select("select * from product")
     List<Product> finAll();
 
-    @Insert("insert into product(productNum,productName,cityName,departureTime,productPrice,productDesc,productStatus)\n" +
-            "values(#{productNum},#{productName},#{cityName},#{departureTime},#{productPrice},#{productDesc},#{productStatus})")
+    @Insert("insert into product(id,productNum,productName,cityName,departureTime,productPrice,productDesc,productStatus)\n" +
+            "values(#{id},#{productNum},#{productName},#{cityName},#{departureTime},#{productPrice},#{productDesc},#{productStatus})")
     void add(Product product);
 }
