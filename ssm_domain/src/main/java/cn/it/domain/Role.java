@@ -6,13 +6,10 @@ import java.util.List;
 public class Role implements Serializable {
 
     private String id;
-    private String username;
-    private String email;
-    private String password;
-    private String phoneNum;
-    private int status;
-    private String statusStr;
-    private List<Role> roles;
+    private String roleName;
+    private String roleDesc;
+    private List<Permission> permissions;
+    private List<UserInfo> users;
 
     public String getId() {
         return id;
@@ -22,59 +19,35 @@ public class Role implements Serializable {
         this.id = id;
     }
 
-    public String getUsername() {
-        return username;
+    public String getRoleName() {
+        return roleName;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setRoleName(String roleName) {
+        this.roleName = roleName;
     }
 
-    public String getEmail() {
-        return email;
+    public String getRoleDesc() {
+        return roleDesc;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setRoleDesc(String roleDesc) {
+        this.roleDesc = roleDesc;
     }
 
-    public String getPassword() {
-        return password;
+    public List<Permission> getPermissions() {
+        return permissions;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setPermissions(List<Permission> permissions) {
+        this.permissions = permissions;
     }
 
-    public String getPhoneNum() {
-        return phoneNum;
+    public List<UserInfo> getUsers() {
+        return users;
     }
 
-    public void setPhoneNum(String phoneNum) {
-        this.phoneNum = phoneNum;
-    }
-
-    public int getStatus() {
-        return status;
-    }
-
-    public void setStatus(int status) {
-        this.status = status;
-    }
-
-    public String getStatusStr() {
-        return statusStr;
-    }
-
-    public void setStatusStr(String statusStr) {
-        this.statusStr = statusStr;
-    }
-
-    public List<Role> getRoles() {
-        return roles;
-    }
-
-    public void setRoles(List<Role> roles) {
-        this.roles = roles;
+    public void setUsers(List<UserInfo> users) {
+        this.users = users;
     }
 }
