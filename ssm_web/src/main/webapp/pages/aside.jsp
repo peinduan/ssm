@@ -11,7 +11,7 @@
                      class="img-circle" alt="User Image">
             </div>
             <div class="pull-left info">
-                <p>xxx</p>
+                <p><security:authentication property="principal.username"/></p>
                 <a href="#"><i class="fa fa-circle text-success"></i> 在线</a>
             </div>
         </div>
@@ -44,10 +44,14 @@
                             href="${pageContext.request.contextPath}/permission/findAll">
                         <i class="fa fa-circle-o"></i> 资源管理
                     </a></li>
-                    <li><a
+                    <li>
+                        <security:authorize access="hasRole('ROLE_CEO')">
+                        <a
                             href="${pageContext.request.contextPath}/sysLog/findAll"> <i
                             class="fa fa-circle-o"></i> 访问日志
-                    </a></li>
+                    </a>
+                        </security:authorize>
+                    </li>
                 </ul>
             </li>
             <li class="treeview"><a href="#"> <i class="fa fa-cube"></i>

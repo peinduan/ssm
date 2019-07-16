@@ -5,6 +5,7 @@ import cn.it.domain.UserInfo;
 import cn.it.service.IUserService;
 import cn.it.utils.Href;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -17,6 +18,7 @@ public class UserController {
     @Autowired
     private IUserService us;
 
+    @Secured("ROLE_CEO")
     @RequestMapping("/findAll")
     public ModelAndView findAll(){
         return Href.go("userList",us.findAll(),"user-list");
