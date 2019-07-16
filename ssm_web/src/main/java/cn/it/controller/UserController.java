@@ -33,7 +33,7 @@ public class UserController {
     @RequestMapping("/findById")
     public ModelAndView findById(@RequestParam(name = "id")String id){
         UserInfo userInfo=us.findById(id);
-        return Href.go("user",userInfo,"user-show");
+        return Href.go("user",userInfo,"user-show1");
 
     }
 

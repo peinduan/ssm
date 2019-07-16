@@ -86,14 +86,14 @@
 				<li><a href="${pageContext.request.contextPath}/index.jsp"><i
 						class="fa fa-dashboard"></i> 首页</a></li>
 				<li><a
-					href="${pageContext.request.contextPath}/role/findAll.do">角色管理</a></li>
+					href="${pageContext.request.contextPath}/role/findAll">角色管理</a></li>
 				<li class="active">添加权限表单</li>
 			</ol>
 			</section>
 			<!-- 内容头部 /-->
 
 			<form
-				action="${pageContext.request.contextPath}/role/addPermissionToRole.do"
+				action="${pageContext.request.contextPath}/role/addPermissionToRole"
 				method="post">
 				<!-- 正文区域 -->
 				<section class="content"> 
@@ -113,7 +113,7 @@
 								</tr>
 							</thead>
 							<tbody>
-								<c:forEach items="${permissionList}" var="permission">
+								<c:forEach items="${role.permissions}" var="permission">
 									<tr>
 										<td>
 										
