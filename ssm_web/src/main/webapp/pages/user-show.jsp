@@ -86,7 +86,7 @@
                 <li><a href="${pageContext.request.contextPath}/index.jsp"><i
                         class="fa fa-dashboard"></i> 首页</a></li>
                 <li><a
-                        href="${pageContext.request.contextPath}/user/findAll.do">用户管理</a></li>
+                        href="${pageContext.request.contextPath}/user/findAll">用户管理</a></li>
 
                 <li class="active">全部用户</li>
             </ol>
@@ -144,7 +144,7 @@
 
                                 <tbody>
                                 <c:forEach items="${user.roles}" var="role" varStatus="vs1">
-                                    <tr data-tt-id="${vs1.index+1}" data-tt-parent-id="0"">
+                                    <tr data-tt-id="${vs1.index+1}" data-tt-parent-id="0">
                                         <td>${role.roleName }</td>
                                         <td>${role.roleDesc }</td>
                                     </tr>
