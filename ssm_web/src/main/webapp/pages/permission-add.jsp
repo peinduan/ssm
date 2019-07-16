@@ -84,13 +84,13 @@
 			<ol class="breadcrumb">
 				<li><a href="${pageContext.request.contextPath}/index.jsp"><i
 						class="fa fa-dashboard"></i> 首页</a></li>
-				<li><a href="${pageContext.request.contextPath}/permission/findAll.do">资源权限管理</a></li>
+				<li><a href="${pageContext.request.contextPath}/permission/findAll">资源权限管理</a></li>
 				<li class="active">资源权限表单</li>
 			</ol>
 			</section>
 			<!-- 内容头部 /-->
 
-			<form action="${pageContext.request.contextPath}/permission/save.do"
+			<form action="${pageContext.request.contextPath}/permission/save"
 				method="post">
 				<!-- 正文区域 -->
 				<section class="content"> <!--产品信息-->

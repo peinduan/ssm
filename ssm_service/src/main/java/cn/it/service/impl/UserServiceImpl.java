@@ -32,7 +32,7 @@ public class UserServiceImpl implements IUserService {
         UserInfo user = userDao.findUserByUsername(username);
         System.out.println(user);
         if (user==null) return null;
-        return new User(user.getUsername(),"{noop}"+user.getPassword(),user.getStatus()==1,
+        return new User(user.getUsername(),user.getPassword(),user.getStatus()==1,
                 true,true,true,
                 getAuthorities(user.getRoles()));
 
@@ -46,14 +46,13 @@ public class UserServiceImpl implements IUserService {
         return list;
     }
 
-
     @Override
     public List<UserInfo> findAll() {
         return userDao.findAll();
     }
 
     @Override
-    public void save(UserInfo userInfo) {
+    public  void save(UserInfo userInfo) {
         userInfo.setId(UUID.randomUUID().toString().replace("-",""));
         userInfo.setPassword(pe.encode(userInfo.getPassword()));
         userDao.save(userInfo);

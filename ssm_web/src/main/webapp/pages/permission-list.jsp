@@ -85,7 +85,7 @@
 				<li><a href="${pageContext.request.contextPath}/index.jsp"><i
 						class="fa fa-dashboard"></i> 首页</a></li>
 				<li><a
-					href="${pageContext.request.contextPath}/permission/findAll.do">资源权限管理</a></li>
+					href="${pageContext.request.contextPath}/permission/findAll">资源权限管理</a></li>
 
 				<li class="active">全部权限</li>
 			</ol>
@@ -150,8 +150,8 @@
 											<td>${p.permissionName }</td>
 											<td>${p.url }</td>
 											<td class="text-center">
-												<a href="${pageContext.request.contextPath}/permission/findById.do?id=${p.id}" class="btn bg-olive btn-xs">详情</a>
-												<a href="${pageContext.request.contextPath}/permission/deletePermission.do?id=${p.id}" class="btn bg-olive btn-xs">删除权限</a>
+												<a href="${pageContext.request.contextPath}/permission/findById?id=${p.id}" class="btn bg-olive btn-xs">详情</a>
+												<a href="${pageContext.request.contextPath}/permission/deletePermission?id=${p.id}" class="btn bg-olive btn-xs">删除权限</a>
 											</td>
 										</tr>
 									</c:forEach>

@@ -14,12 +14,6 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="itheima_ssm" target="1.5" />
-      <module name="itheima_ssm_dao" target="1.8" />
-      <module name="itheima_ssm_domain" target="1.8" />
-      <module name="itheima_ssm_service" target="1.8" />
-      <module name="itheima_ssm_util" target="1.8" />
-      <module name="itheima_ssm_web" target="1.8" />
       <module name="spring_ssm" target="1.5" />
       <module name="ssm_dao" target="1.8" />
       <module name="ssm_domain" target="1.8" />
