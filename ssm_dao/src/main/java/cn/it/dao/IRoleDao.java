@@ -20,10 +20,7 @@ public interface IRoleDao {
     })
     Role findRoleByUserId(String id);
 
-    @Select("SELECT * FROM role WHERE id NOT IN (\n" +
-            "SELECT role.id\n" +
-            "FROM role,users_role\n" +
-            "WHERE role.`id` = users_role.`roleid` AND users_role.`userid`=#{id})")
+    @Select("SELECT * FROM role WHERE id NOT IN (SELECT roleid FROM users_role WHERE userid=#{id})")
     Role findRoleNotHaveByUserId(String id);
 
 
